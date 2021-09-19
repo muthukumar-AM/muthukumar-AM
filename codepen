@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    
+    <title>Codepen Design</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    </head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    html{
+        background-color: black;
+    }   
+    .container{
+        height: 100%;
+        width: 100%;
+        
+    }
+    .container1{
+        width: 100%;
+        height: 80px;
+       
+    }
+    .name{
+        height: 120px;
+        width: 180px;
+        color: white;
+        font-size: 12px;
+        padding: 20px 10px;
+        float: left;
+    }
+    .name h3{
+        font-family: sans-serif;
+        font-size: 20px;
+    }
+    .name p{
+        font-family: sans-serif;
+        margin-top: 5px;
+        
+    }
+    .name p a{
+        text-decoration: none;
+        color: black;
+        background-color: lightgreen;
+        padding: 2px 6px;
+        margin-left: 3px;
+       border-top-left-radius: 2px;
+        border-top-right-radius: 2px;
+        border-bottom-left-radius: 2px;
+        border-bottom-right-radius: 2px;
+    }
+    .menu{
+        float: right;
+        padding: 20px 30px;
+    }
+    .menu ul{
+        
+    }
+    .menu ul li{
+        display:inline-block;
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
+        border-bottom-left-radius: 6px;
+        border-bottom-right-radius: 6px;
+        
+        
+    }
+    .menu ul li:hover{
+        opacity: 0.7;
+        color: white;
+    }
+    .menu ul li a{
+        color: white;
+        
+        text-decoration-line: none;
+    }
+    .menu ul li a i{
+        
+    }
+    .color{
+        background-color: lightgreen;
+    }
+    .container2{
+        width: 100%;
+        height: 350px;
+        border-top: 1px solid gray;
+        border-bottom: 1px solid gray;
+        float: left;
+        position: absolute;
+         
+    }
+    .container2 .box{
+        width:32.4%;
+        height: 350px;
+        border-left: 1px solid gray;
+        border-right: 1px solid gray;
+        float: left;
+        margin-left: 10px;
+        
+        
+        
+    }
+    .heading{
+        width:100%;
+        height: 30px;
+        
+        float: left;
+    }
+    .text{
+        width: 80px;
+        float: left;
+        background-color: #5c5a58;
+    }
+    .heading .text h2{
+        color: gainsboro;
+        font-family: monospace;
+        padding: 5px 15px;
+    }
+    .menu1{
+        float: right;
+        
+    }
+    .menu1 ul{
+        
+        padding-right: 5px;
+    }
+    .menu1 ul li{
+        display: inline-block;
+        padding-bottom:-10px;
+        padding: 3px 5px 3px 5px;
+        background-color: #5c5a58;
+        margin: 3px 1px;
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+        border-bottom-left-radius: 3px;
+        border-bottom-right-radius: 3px;
+        
+    }
+    .code-section{
+        float: left;
+        height: 320px;
+        width: 100%;
+        background-color: #5c5a58;
+        overflow:scroll;
+        
+    }
+    .container3{
+        margin-top: 20px;
+        width: 100%;
+        background-color: white;
+        height: 180px;;
+        float: left;
+         overflow:scroll;
+    }
+    .forms{
+        width: 60%;
+        margin: 0 auto;
+        height: 300px;
+       
+    }
+    .form1{
+        width: 45%;
+        height: 480px;
+        background-color: black;
+        float: left;
+        box-shadow: 12px 12px 13px gray;
+    }
+    .form2{
+        width: 45%;
+        height: 480px;
+        background-color: white;
+        float: left;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        padding-left: 20px;
+        border: black;
+        
+        
+    }
+    .form2 input{
+        width: 90%;
+        margin: 10px 20px;
+        padding-top: 15px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        text-align:left;
+        padding-left: 10px;
+        border-color: none;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    .form1 input{
+        width: 90%;
+        margin: 10px 20px;
+        padding-top: 15px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        text-align:left;
+        padding-left: 10px;
+    }
+    .btn{
+        background-color: white;
+        margin-top: 10px;
+         border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        padding: 10px 10px;
+        border: none;
+    }
+    .btn1{
+        background-color:black;
+        margin-top: 10px;
+         border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        padding: 10px 10px;
+        border: none;
+        color: white;
+    }
+    .head{
+        text-align: center;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .footer{
+        width: 100%;
+        height: 20px;
+    }
+    .footer .left{
+        width: 100%;
+        height: 20px;
+        position: absolute;
+        bottom: 0;
+    }
+    .footer .left ul{
+        float: left;
+        margin-left: 6px;
+    }
+    .footer .left ul li{
+        display: inline-block;
+        padding: 0px 4px;
+        background-color: gray;
+        color: white;
+        border-top-left-radius: 2px;
+        border-top-right-radius: 2px;
+        border-bottom-left-radius: 2px;
+        border-bottom-right-radius: 2px;
+    }
+    .footer .left ul li a{
+        text-decoration: none;
+        color: white;
+       
+        
+    }
+    .footer .right{
+        width: 100%;
+        height: 20px;
+        position: absolute;
+        bottom: 0;
+    }
+    .footer .right ul{
+        float: right;
+        margin-left: 6px;
+    }
+    .footer .right ul li{
+        display: inline-block;
+        padding: 0px 4px;
+        background-color: gray;
+        color: white;
+        border-top-left-radius: 2px;
+        border-top-right-radius: 2px;
+        border-bottom-left-radius: 2px;
+        border-bottom-right-radius: 2px;
+    }
+    .footer .right ul li a{
+        text-decoration: none;
+        color: white;
+       
+        
+    }
+    </style>
+
+
+<body>
+<div class="container">
+ <div class="container1">
+    <div class="name">
+     <h3>Cards-ui(giftcards)</h3>
+        <p>Pursharth Zutshi<a href="#">+follow</a></p>
+     </div>
+    <div class="menu">
+        <ul>
+        <li style="background-color: #5c5a58;padding: 12px 15px 15px 15px; "><a href="#">&#10084</a></li>
+            <li style="background-color: #5c5a58;padding: 8px 15px 15px 15px "><a href="#"><i class="fa fa-gear" style="font-size:24px"></i>Settings</a></li>
+            <li style="background-color: #5c5a58;padding: 12px 15px 15px 15px "><a href="#">&#9744;</a></li>
+            <li style="background-color: lightgreen;padding: 15px 15px "><a href="#">Sign Up</a></li>
+            <li style="background-color:#5c5a58;padding: 15px 15px "><a href="#">Log In</a></li>
+        </ul>
+     
+        
+     
+     </div>
+    
+    </div>   
+    <div class="container2">
+        <div class="box">
+            <div class="heading">
+            <div class="text">
+                <h2>HTML</h2>
+                </div>
+                <div class="menu1">
+                    <ul>
+                    <li><a href="#"><i class="fa fa-gear" style="font-size:15px;color: white"></i></a></li>
+                        <li><a href="#"><select style="background-color: #5c5a58;border: none;color: white;padding-right: 1px"></select></a></li>
+                    
+                    </ul>
+                </div>
+                
+            </div>
+            <div class="code-section">
+                
+                </div>
+        </div>
+        <div class="box">
+            <div class="heading">
+            <div class="text">
+                <h2>CSS</h2>
+                </div>
+                <div class="menu1">
+                    <ul>
+                    <li><a href="#"><i class="fa fa-gear" style="font-size:15px;color: white"></i></a></li>
+                        <li><a href="#"><select style="background-color: #5c5a58;border: none;color: white;padding-right: 1px"></select></a></li>
+                    
+                    </ul>
+                </div>
+                
+            </div>
+            <div class="code-section">
+                
+                </div>
+            
+        </div>
+        <div class="box">
+            <div class="heading">
+            <div class="text">
+                <h2>JS</h2>
+                </div>
+                <div class="menu1">
+                    <ul>
+                    <li><a href="#"><i class="fa fa-gear" style="font-size:15px;color: white"></i></a></li>
+                        <li><a href="#"><select style="background-color: #5c5a58;border: none;color: white;padding-right: 1px"></select></a></li>
+                    
+                    </ul>
+                </div>
+                
+            </div>
+            <div class="code-section">
+                
+                </div>
+        </div>
+        <div class="container3">
+        <div class="forms">
+            <h1 class="head">Gift cards</h1>
+            <form class="form1">
+            <i class="fa fa-gift" style="font-size:58px;color:deeppink;padding:10% 40%"></i>
+                <h4 style="background-color: white;text-align: center;padding: 20px 20px">Gift Cards</h4>
+                <p style="color: white;font-family: monospace;text-align: center;font-size: 20px;padding-top: 20px">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <input type="text" placeholder="For">
+                <input type="text" placeholder="Amount">
+                <input type="text" placeholder="From">
+                <center><button class="btn">Submit</button></center>
+            </form>
+            <form class="form2">
+            <i class="fa fa-gift" style="font-size:58px;color:deeppink;padding:10% 40%"></i>
+                <h4 style="background-color: white;text-align: center;padding: 20px 20px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">Gift Cards</h4>
+                <p style="color: black;font-family: monospace;text-align: center;font-size: 20px;padding-top: 20px">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <input type="text" placeholder="For">
+                <input type="text" placeholder="Amount">
+                <input type="text" placeholder="From">
+                <center><button class="btn1">Submit</button></center>
+            </form>
+            </div>
+        
+        </div>
+    </div>
+    <div class="footer">
+    <div class="left">
+        <ul>
+        <li><a href="#"><p>console</p></a></li>
+            <li><a href="#"><p>Assets</p></a></li>
+            <li><a href="#"><p>comments</p></a></li>
+            <li><a href="#"><p>shortcuts</p></a></li>
+        
+        </ul>
+        </div>
+    <div class="right">
+         <ul>
+        <li><a href="#"><p>Fork</p></a></li>
+            <li><a href="#"><p>Embed</p></a></li>
+            <li><a href="#"><p>Export</p></a></li>
+            <li><a href="#"><p>share</p></a></li>
+        
+        </ul>
+        </div>
+    </div>
+    </div>    
+  </body>
+</html>
