@@ -1,0 +1,102 @@
+<!DCtype html>
+<html>
+<head>
+    
+    <title>Cost of living Calculator</title>
+    
+</head>
+    
+<style>
+    .form{
+        width: 100%;
+        height: 100%;
+    }    
+    .form form{
+        width: 100%;
+        height: 100px;
+    }
+    .title{
+        width: 100%;
+        height: 100px;
+    }
+    .title h1{
+        text-align: center;
+        color: blue;
+    }
+    .fields{
+        width: 50%;
+        height: 100px;
+        margin: 0 auto;
+    }
+    .fields .row{
+       
+        padding-top: 20px;
+    }
+    .form1{
+        width: 50%;
+        height: 100%;
+       margin: 0 auto;
+    }
+    .show{
+        width: 50%;
+        height: 100%;
+        margin: 0 auto;
+    }
+    </style>
+
+<body>
+    <div class="form">
+        <form>
+            <div class="title">
+                <h1>Cost of living Calculator</h1>
+            </div>
+         
+            <div class="fields">
+                <div class="row">
+                    <input type="radio" name="city1" value="another-city" onclick="createForm(value)">I already live in germany and would like to move to another city
+                </div>
+                <div class="row">
+                    <input type="radio" name="city1" value="german-city" onclick="createForm(value)">I live outside of Germany and would like to move to a particular city.
+                </div>
+            </div>
+         
+            <div id="show">
+         
+            </div>
+        </form>
+    </div>   
+    <script>
+        function createForm(city){
+            
+        if(city=="another-city"){
+            
+            var form1="<div class='form1'><h1>Germany-anothercity</h1><br><br><form id='anotherform' style='border:2px solid green'>Income:<br><input type='text' id='income' name='income'><br><br>Adults:<br><input type='text' id='adults'><br><br>Children:<br><input type='text' id='children'><br><br>How often do you eat outside:<br><input type='text' id='eat'><br><br>Do you mostly cook your own food?:<br><input type='text' id='cook'><br><br>Age-Child1:<br><input type='text' id='child'><br><br>Do you normally use public transport or prefer taxi/uber?:<br><br><input type='text' id='transport'><br><br>Do you have your own car?:<br><input type='text' id='car'><br><br>Do you go on trips/leisure travel every month?:<br><input type='text' id='travel'><br><br>Savings:<br><input type='text' id='savings'><br><br><button type='submit' onclick='calculate()'>SUBMIT</button></form></div>";
+            
+             
+            document.getElementById("show").innerHTML=form1;
+            
+           
+            
+        }
+            
+        else {
+            
+            var form2="<div class='form1' ><h1>anothercity-germany</h1><form id='anotherform'>Income:<br><input type='text' id='income' name='income'><br><br>Adults:<br><input type='text' id='adults'><br><br>Children:<br><input type='text' id='children'><br><br>How often do you eat outside:<br><input type='text' id='eat'><br><br>Do you mostly cook your own food?:<br><input type='text' id='cook'><br><br>Age-Child1:<br><input type='text' id='child'><br><br>Do you normally use public transport or prefer taxi/uber?:<br><br><input type='text' id='transport'><br><br>Do you have your own car?:<br><input type='text' id='car'><br><br>Do you go on trips/leisure travel every month?:<br><input type='text' id='travel'><br><br>Savings:<br><input type='text' id='savings'><br><br><button type='submit' onclick='calculate()'>SUBMIT</button></form></div>";
+            
+            
+            document.getElementById("show").innerHTML=form2;
+            
+        }
+    }
+        
+</script>
+    
+    </body>
+
+
+
+
+
+
+
+</html>
