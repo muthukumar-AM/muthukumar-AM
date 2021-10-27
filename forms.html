@@ -15,7 +15,7 @@
         function validate(){
             var email=document.getElementById("email");
             var Name=document.getElementById("name");
-            var Phoneno=document.getElementById("phno");
+            var Phoneno=document.getElementById("phoneno");
             if(Name.value==""||Name.value.trim()==""){
                 document.getElementById("uname").style.visibility = "visible";
                 document.getElementById("uname").style.color = "red";
@@ -51,7 +51,7 @@
    
     <div class="form-group">
       <label for="ph">Phone Number:</label>
-      <input type="text" class="form-control " id="phno" placeholder="Enter Phone no" name="ph">
+      <input type="text" class="form-control " id="phoneno" placeholder="Enter Phone no" name="ph">
       <p id="phoneno" style="visibility: hidden;" class="text-danger"> invalid Phone No</p>
     </div>
     
