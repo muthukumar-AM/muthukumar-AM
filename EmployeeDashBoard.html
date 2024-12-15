@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Employee DashBoard</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<script src= "https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src= "https://cdn.jsdelivr.net/npm/sweetalert2@11.4.8/dist/sweetalert2.all.min.js"></script>
+<script>
+function Record(id){
+	const login = new Date();
+	console.log(id);
+	var time=login.getHours() + ':' + login.getMinutes();
+	
+	document.getElementById(id).value = time;
+	var n=document.getElementById(id).value;
+	localStorage.setItem("data",n);
+	if(id=="login"){
+		Swal.fire(
+	            'Have a nice day.',
+	            '<lottie-player src="https://assets7.lottiefiles.com/private_files/lf30_6gqfjgqh.json" style="height:100px;width:100px;margin-left:90px"   background="transparent"  speed="1"   loop autoplay ></lottie-player>'
+	            
+	        )
+	}
+	if(id=="breakout"){
+		Swal.fire(
+	            'Take a break.',
+	            '<lottie-player src="https://assets1.lottiefiles.com/private_files/lf30_ndv57uun.json" style="height:150px;width:150px;margin-left:70px"   background="transparent"  speed="1"   loop autoplay ></lottie-player>'
+	            
+	        )
+	}
+	if(id=="breakin"){
+		Swal.fire(
+	            'continue.',
+	            '<lottie-player src="https://assets10.lottiefiles.com/private_files/lf30_6orejzhz.json" style="height:250px;width:250px;margin-left:10px"   background="transparent"  speed="1"   loop autoplay ></lottie-player>'
+	            
+	        )
+	}
+	if(id=="lunchout"){
+		Swal.fire(
+	            'Feed Energy.',
+	            '<lottie-player src="https://assets1.lottiefiles.com/datafiles/BNd8ZHSaX1zZ2nm/data.json" style="height:250px;width:250px;margin-left:10px"   background="transparent"  speed="1"   loop autoplay ></lottie-player>'
+	            
+	        )
+	}
+	if(id=="lunchin"){
+		Swal.fire(
+	            'continue.',
+	            '<lottie-player src="https://assets10.lottiefiles.com/private_files/lf30_6orejzhz.json" style="height:250px;width:250px;margin-left:10px"   background="transparent"  speed="1"   loop autoplay ></lottie-player>'
+	            
+	        )
+	}
+	if(id=="logout"){
+		Swal.fire(
+	            'Thanks for the day.',
+	            '<lottie-player src="https://assets9.lottiefiles.com/packages/lf20_5opuln2d.json" style="height:100px;width:100px;margin-left:90px"   background="transparent"  speed="1"   loop autoplay ></lottie-player>'
+	            
+	        )
+	}
+	
+}
+
+ </script>
+<style>
+
+    body {
+        color: #566787;
+		background-image:url('images/holidays.jpg');
+		background-size:cover;
+		background-repeat:no-repeat;
+		font-family: 'Varela Round', sans-serif;
+		font-size: 15px;
+	}
+    .table-responsive {
+        margin-top:30px;
+       
+    }
+	.table-wrapper {
+        min-width: 1000px;
+        background: #fff;
+        padding: 20px 25px;
+		border-radius: 3px;
+		
+        box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    }
+	.table-title {
+		padding-bottom: 15px;
+		background: linear-gradient(to top, #0ba360 0%, #3cba92 100%);
+		color: #fff;
+		padding: 16px 30px;
+		margin: -20px -25px 10px;
+		border-radius: 3px 3px 0 0;
+    }
+    .table-title h2 {
+		margin: 5px 0 0;
+		font-size: 24px;
+	}
+	.table-title .btn {
+		color: #566787;
+		float: right;
+		font-size: 13px;
+		background: #fff;
+		border: none;
+		min-width: 50px;
+		border-radius: 2px;
+		border: none;
+		outline: none !important;
+		margin-left: 10px;
+	}
+	.table-title .btn:hover, .table-title .btn:focus {
+        color: #566787;
+		background: #f2f2f2;
+	}
+	.table-title .btn i {
+		float: left;
+		font-size: 21px;
+		margin-right: 5px;
+	}
+	.table-title .btn span {
+		float: left;
+		margin-top: 20px;
+	}
+    table.table tr th, table.table tr td {
+        border-color: #e9e9e9;
+		padding: 18px 2px;
+		vertical-align: middle;
+    }
+	table.table tr th:first-child {
+		width: 60px;
+	}
+	table.table tr th:last-child {
+		width: 100px;
+	}
+    table.table-striped tbody tr:nth-of-type(odd) {
+    	background-color: #fcfcfc;
+	}
+	table.table-striped.table-hover tbody tr:hover {
+		background: #f5f5f5;
+	}
+    table.table th i {
+        font-size: 13px;
+        margin: 0 5px;
+        cursor: pointer;
+    }	
+    table.table td:last-child i {
+		opacity: 0.9;
+		font-size: 22px;
+        margin: 10 5px;
+    }
+	table.table td a {
+		font-weight: bold;
+		color: #566787;
+		display: inline-block;
+		text-decoration: none;
+	}
+	table.table td a:hover {
+		color: #2196F3;
+	}
+	table.table td a.settings {
+        color: #2196F3;
+    }
+    table.table td a.delete {
+        color: #F44336;
+    }
+    table.table td i {
+        font-size: 19px;
+    }
+	table.table .avatar {
+		border-radius: 50%;
+		vertical-align: middle;
+		margin-right: 10px;
+	}
+	.status {
+		font-size: 30px;
+		margin: 2px 2px 0 0;
+		display: inline-block;
+		vertical-align: middle;
+		line-height: 10px;
+	}
+    .text-success {
+        color: #10c469;
+    }
+    .text-info {
+        color: #62c9e8;
+    }
+    .text-warning {
+        color: #FFC107;
+    }
+    .text-danger {
+        color: #ff5b5b;
+    }
+    .pagination {
+        float: right;
+        margin: 0 0 5px;
+    }
+    .pagination li a {
+        border: none;
+        font-size: 13px;
+        min-width: 30px;
+        min-height: 30px;
+        color: #999;
+        margin: 0 2px;
+        line-height: 30px;
+        border-radius: 2px !important;
+        text-align: center;
+        padding: 0 6px;
+    }
+    .pagination li a:hover {
+        color: #666;
+    }	
+    .pagination li.active a, .pagination li.active a.page-link {
+        background: #03A9F4;
+    }
+    .pagination li.active a:hover {        
+        background: #0397d6;
+    }
+	.pagination li.disabled i {
+        color: #ccc;
+    }
+    .pagination li i {
+        font-size: 16px;
+        padding-top: 6px
+    }
+    .hint-text {
+        float: left;
+        margin-top: 10px;
+        font-size: 13px;
+    }
+    .th, .td {
+  padding: 15px;
+  text-align: left;
+}
+</style>
+
+</head>
+<body>
+
+ <%@page contentType="text/html; charset=ISO-8859-1"%>
+    <%@page import="java.io.IOException"%>
+     <%@page import="java.io.PrintWriter"%>
+      <%@page import="java.sql.Connection"%>
+       <%@page import="java.sql.DriverManager"%>
+        <%@page import="java.sql.ResultSet"%>
+         <%@page import="java.sql.Statement"%>
+         <%@page import="java.time.LocalDate"%>
+<%
+String email=request.getParameter("mail");
+String password=request.getParameter("pwd");
+String no=null;
+LocalDate date = LocalDate.now(); 
+try {
+	Class.forName("com.mysql.cj.jdbc.Driver");
+
+	Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/loginsystem?serverTimezone=UTC",
+	"root", "root");
+	Statement stmt=conn.createStatement();
+	ResultSet rs = stmt.executeQuery("select * from employee where email='" +email
+			+ "' and password='" + password + "'");
+	 
+     
+%>    
+  
+<div class="container">
+
+
+
+    <div class="table-responsive">
+        <div class="table-wrapper">
+            <div class="table-title">
+                <div class="row">
+                    <div class="col-xs-5">
+                        
+                    </div>
+                    <div class="col-xs-7">
+                    
+                    <a href="ViewTask.jsp"><button type="button" class="btn btn-primary">Plan for the day</button></a>
+                   
+                        <a href="leave.jsp"><button type="button" class="btn btn-primary">Apply Leave</button></a>
+                        <a href="EmpHolidays.jsp"><button type="button" class="btn btn-primary">Holidays</button></a>
+                       						
+                    </div>
+                </div>
+            </div>
+            
+            
+                   
+                    <% 
+                     while (rs.next()) 
+     {  
+          no = rs.getString(1);  
+         
+         String mail=rs.getString(3);
+         %>
+         <lottie-player src="https://assets4.lottiefiles.com/private_files/lf30_gun3na3n.json" style="height:250px;width:250px;float:right;margin-right:230px;margin-top:40px"   background="transparent"  speed="1"   loop autoplay ></lottie-player>
+         <table style="width:50%;margin-left:50px;margin-top:50px;">
+         
+  <tr>
+    <th class="th" style="color:green">Id</th>
+    <td class="td"><%out.println(no); %></td>
+    
+  </tr>
+  <tr style="padding-top:20px">
+    <th class="th" style="color:green">Name</th>
+    <td class="td"><%out.println(rs.getString(2)); %></td>
+  </tr>
+  
+  <tr>
+    <th class="th" style="color:green">Email</th>
+    <td class="td"><%out.println(rs.getString(3)); %></td>
+  </tr>
+  <tr>
+    <th class="th" style="color:green">Join Date</th>
+    <td class="td"><%out.println(rs.getString(5)); %></td>
+  </tr>
+  <tr>
+    <th class="th" style="color:green">Position</th>
+    <td class="td"><%out.println(rs.getString(6)); %></td>
+  </tr>
+  
+</table>
+
+
+<br>
+<br>
+<br>
+         <table class="table table-striped table-hover">
+                <thead>
+                    <tr>
+                    <th >Date</th>
+                        <th >Id</th>
+                       	<th style="width:120px">Email</th>
+                        <th style="width:150px;padding-left:30px">Login</th>
+                        <th style="width:150px">Break Out</th>
+                        <th style="width:150px">Break In</th>
+                        <th style="width:150px">Lunch Out</th>
+                        <th style="width:150px">Lunch In</th>
+                        <th style="width:150px">Log Out</th>
+                    </tr>
+                </thead>
+                <tbody>
+         <form method="post" action="Msg">
+          <tr>
+          <td><input name="date" style="border:none;width:100px" type="text" value=<%out.println(date); %>></td>
+          <td><input name="id" style="border:none;width:20px" type="text" value=<%out.println(no); %>></td>
+                        <td><input name="email" style="border:none;width:200px" type="text" value=<%out.println(mail); %>></td>
+                        <td><input id="login" name="login" style="border:none;width:50px;margin-left:30px" type="text"  required></td>
+                        <td><input id="breakout" name="breakout" style="border:none;width:50px;margin-left:10px" type="text" required ></td>
+                        <td><input id="breakin" name="breakin" style="border:none;width:50px;margin-left:10px" type="text" required></td>
+                        <td><input id="lunchout" name="lunchout" style="border:none;width:50px;margin-left:10px" type="text" required></td>
+                        <td><input id="lunchin" name="lunchin" style="border:none;width:50px;margin-left:10px" type="text" required></td>
+                        <td><input id="logout" name="logout" style="border:none;width:50px;margin-left:10px" type="text" required></td>
+                                                
+                        
+                    </tr>
+                    <tr>
+          
+                        <td></td>
+                        <td></td>
+                         <td></td>
+                        <td><button type="button" class="btn btn-success" style="margin-left:30px" id="login" onclick="Record(this.id)">Login</button></td> 
+                        <td><button type="button" class="btn btn-danger" id="breakout" onclick="Record(this.id)">Break Out</button></td> 
+                        <td><button type="button" class="btn btn-success" id="breakin" onclick="Record(this.id)">Break In</button></td> 
+                        <td><button type="button" class="btn btn-danger" id="lunchout" onclick="Record(this.id)">Lunch Out</button></td>
+                        <td><button type="button" class="btn btn-success" id="lunchin" onclick="Record(this.id)">Lunch In</button></td> 
+                        <td><button type="button" class="btn btn-danger" id="logout" onclick="Record(this.id)">Log Out</button></td>                         
+                        
+                    </tr>
+                    
+        
+  <%    }  
+                    %>
+                        
+                   
+                </tbody>
+                
+            </table>
+            <center><button type="submit" class="btn btn-primary">Done</button></center>
+            </form>
+        </div>
+    </div> 
+    <!-- plan for the day -->       
+</div>   
+
+<% 
+	}
+	catch(Exception e) {
+	e.printStackTrace();
+	}
+
+%>
+
+</body>
+</html>
